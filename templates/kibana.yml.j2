@@ -1,0 +1,16 @@
+{% if kibana_yml_config %}
+{{ kibana_yml_config | to_nice_yaml }}
+{% endif -%}
+
+{% if kibana_yml_config['server.port'] is not defined %}
+server.port: {{ kibana_server_port }}
+{% endif -%}
+
+{% if kibana_yml_config['server.host'] is not defined %}
+server.host: {{ kibana_server_host }}
+{% endif -%}
+
+{% if kibana_yml_config['elasticsearch.url'] is not defined %}
+elasticsearch.url: {{ kibana_elasticsearch_url }}
+{% endif -%}
+

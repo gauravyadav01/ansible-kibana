@@ -1,0 +1,8 @@
+---
+kibana_version: "6.2"
+kibana_yml_config: {}
+
+kibana_server_port: 5601
+kibana_server_host: "0.0.0.0"
+
+kibana_elasticsearch_url: "http://localhost:9200"
