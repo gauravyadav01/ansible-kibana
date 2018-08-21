@@ -1,5 +1,5 @@
 ---
-kibana_version: "6.2"
+kibana_version: "6.3"
 kibana_yml_config: {}
 
 kibana_server_port: 5601
