@@ -14,13 +14,9 @@ server.host: {{ kibana_server_host }}
 elasticsearch.url: {{ kibana_elasticsearch_url }}
 {% endif -%}
 
-{% if kibana_yml_config['elasticsearch.url'] is not defined %}
-elasticsearch.url: {{ kibana_elasticsearch_url }}
-{% endif -%}
-
 {% if kibana_enable_xpack %}
-  {% if not "security" in kibana_xpack_features %}
-    xpack.security.enabled: false
-  {% endif -%}
+{% if not "security" in kibana_xpack_features %}
+ xpack.security.enabled: false
+{% endif -%}
 
 {% endif -%}
