@@ -18,8 +18,8 @@ elasticsearch.url: {{ kibana_elasticsearch_url }}
 elasticsearch.url: {{ kibana_elasticsearch_url }}
 {% endif -%}
 
-{% if es_enable_xpack %}
-  {% if not "security" in es_xpack_features %}
+{% if kibana_enable_xpack %}
+  {% if not "security" in kibana_xpack_features %}
     xpack.security.enabled: false
   {% endif %}
 
