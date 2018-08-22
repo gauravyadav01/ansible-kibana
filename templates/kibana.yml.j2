@@ -21,6 +21,6 @@ elasticsearch.url: {{ kibana_elasticsearch_url }}
 {% if kibana_enable_xpack %}
   {% if not "security" in kibana_xpack_features %}
     xpack.security.enabled: false
-  {% endif %}
+  {% endif -%}
 
 {% endif -%}
