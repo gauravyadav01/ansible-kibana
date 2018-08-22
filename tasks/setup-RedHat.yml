@@ -1,5 +1,5 @@
 ---
-- name: Add kibana GPG 
+- name: Add kibana repo
   yum_repository:
     name: kibana-{{ kibana_version }}
     description: Kibana repo
