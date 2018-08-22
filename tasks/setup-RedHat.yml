@@ -4,8 +4,11 @@
     key: https://packages.elastic.co/GPG-KEY-elasticsearch
     state: present
 
-- name: Add Kibana repository.
-  template:
-    src: kibana.repo.j2
-    dest: /etc/yum.repos.d/kibana.repo
-    mode: 0644
+- name: Add multiple repositories into the same file (2/2)
+  yum_repository:
+    name: kibana-{{ kibana_version }}
+    description: Kibana repo
+    baseurl: https://artifacts.elastic.co/packages/{{ kibana_version }}/yum
+    enabled: yes
+    gpgcheck: yes
+    gpgkey: https://artifacts.elastic.co/GPG-KEY-elasticsearch
