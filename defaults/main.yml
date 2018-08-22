@@ -7,6 +7,6 @@ kibana_server_host: "0.0.0.0"
 
 kibana_elasticsearch_url: "http://localhost:9200"
 
-kibana_xpack_enable: true
+kibana_enable_xpack: true
 
 kiaban_xpack_features: []
