@@ -9,4 +9,4 @@ kibana_elasticsearch_url: "http://localhost:9200"
 
 kibana_enable_xpack: true
 
-kiaban_xpack_features: []
+kibana_xpack_features: []
