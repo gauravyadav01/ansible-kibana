@@ -1,10 +1,5 @@
 ---
-- name: Add Elasticsearch GPG key.
-  rpm_key:
-    key: https://packages.elastic.co/GPG-KEY-elasticsearch
-    state: present
-
-- name: Add multiple repositories into the same file (2/2)
+- name: Add kibana GPG 
   yum_repository:
     name: kibana-{{ kibana_version }}
     description: Kibana repo
